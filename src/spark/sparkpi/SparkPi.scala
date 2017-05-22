@@ -1,5 +1,7 @@
 package spark.sparkpi
 
+import org.apache.spark.{SparkConf, SparkContext}
+
 /**
   * Created by Administrator on 2017/5/21.
   */
@@ -8,7 +10,7 @@ object SparkPi {
 
   def main(args: Array[String]) {
 
-    val conf = new SparkConf().setAppName("Spark Pi").setMaster("spark://hadoop1:7077").setJars(List("/home/kaiseu/MyProject/IdeaProjects/week2/out/artifacts/week2/week2.jar"))
+    val conf = new SparkConf().setAppName("Spark Pi").setMaster("spark://192.168.141.139:7077").setJars(List("C:\\Users\\Administrator\\IdeaProjects\\spark\\out\\spark.jar"))
 
     val spark = new SparkContext(conf)
 
